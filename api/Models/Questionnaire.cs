@@ -6,4 +6,7 @@ public class Questionnaire
     public string Title { get; set; } = "";
     public string? Description { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+    // Navigation: one questionnaire has many questions
+    public ICollection<Question> Questions { get; set; } = [];
 }
